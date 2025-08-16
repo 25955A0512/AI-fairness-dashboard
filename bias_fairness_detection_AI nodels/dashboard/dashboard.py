@@ -22,7 +22,12 @@ mitigated_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'mitiga
 # Load the model
 mitigated_model = joblib.load(mitigated_path)
 
-scaler = joblib.load("models/scaler.pkl")
+
+if os.path.exists("models/scaler.pkl"):
+    scaler = joblib.load("models/scaler.pkl")
+else:
+    st.error("Scaler file not found. Please check your models folder.")
+
 
 
 # 📥 Load cleaned dataset for evaluation
