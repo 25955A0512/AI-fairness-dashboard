@@ -1,6 +1,8 @@
 streamlit
-joblib
+plotly
 fairlearn
 scikit-learn
 pandas
+joblib
 matplotlib
+
