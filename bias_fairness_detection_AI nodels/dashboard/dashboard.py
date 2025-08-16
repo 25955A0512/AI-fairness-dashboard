@@ -24,6 +24,7 @@ mitigated_model = joblib.load(mitigated_path)
 
 scaler = joblib.load("models/scaler.pkl")
 
+
 # 📥 Load cleaned dataset for evaluation
 df = pd.read_csv("data/adult_cleaned.csv")
 X = df.drop(columns=["income", "sex_original"])
